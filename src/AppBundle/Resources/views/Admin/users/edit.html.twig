@@ -1,0 +1,22 @@
+{% extends 'AppBundle:Admin:base.html.twig' %}
+
+{% block body %}
+    <h1>User edit</h1>
+
+    {{ include('AppBundle:Admin:users/form.html.twig') }}
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_users_index') }}">Back to the list</a>
+        </li>
+        <li>
+                {{ form_start(delete_form) }}
+                {{ form_end(delete_form) }}
+            <input type="submit" value="Delete">
+        </li>
+    </ul>
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+{% endblock %}

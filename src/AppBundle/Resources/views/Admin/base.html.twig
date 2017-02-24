@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/admin.css') }}">
+{% endblock %}
+
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/app/js/admin.js') }}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+{% endblock %}

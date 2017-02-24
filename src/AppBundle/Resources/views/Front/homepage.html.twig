@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Front:homepage{% endblock %}
+
+{% block body %}
+
+<h1>Simple Bistro</h1>
+<ul>
+    <li><a href="#"> Menu</a></li>
+    <li><a href="#"> Contact</a></li>
+<ul>
+<hr>
+
+<ul>
+{% for f in food %}
+    <li>{{ f.name }} - {{ f.price }}zł</li>
+{% endfor %}
+<ul>
+
+{% endblock %}

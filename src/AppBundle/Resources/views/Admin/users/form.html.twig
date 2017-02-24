@@ -1,0 +1,24 @@
+{% block body %}
+
+{{ form_start(form) }}
+
+    {{ form_row(form.name, {'attr': { class: 'col-md-4 col-lg-4' } }) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    {{ form_row(form.role) }}
+    <span class="help-block"> super admin - admin panel acces and api CRUD, admin - CRUD, user - read only </span>
+
+    {{ form_row(form.token, { attr:  { class: 'div-token' }} ) }} <span class="help-block">
+    <button data-url="{{ path("admin_ajax_get_token") }}" id="get-token">generate token</button></span>
+
+
+    {{ form_row(form.dateFrom) }}
+    {{ form_row(form.dateTo) }}
+
+    <hr>
+    <input type="submit" value="Save" />
+{{ form_end(form) }}
+    <hr>
+
+{% endblock %}

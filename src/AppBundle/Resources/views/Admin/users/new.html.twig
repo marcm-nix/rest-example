@@ -1,0 +1,13 @@
+{% extends 'AppBundle:Admin:base.html.twig' %}
+
+{% block body %}
+    <h1>User creation</h1>
+
+    {{ include('AppBundle:Admin:users/form.html.twig') }}
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_users_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
